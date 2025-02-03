@@ -20,7 +20,7 @@ var checkDead = setInterval(function(){
 },10);
 function showRestartButton() {
     var restartButton = document.createElement("button");
-    restartButton.innerText = "Recommencer";
+    restartButton.innerText = "Play again";
     restartButton.style.position = "absolute";
     restartButton.style.top = "50%";
     restartButton.style.left = "50%";
