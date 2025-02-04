@@ -18,6 +18,13 @@ var checkDead = setInterval(function(){
         showRestartButton();
     }
 },10);
+var checkWin = setInterval(function(){
+        block.style.animation = "none";
+        block.style.display = "none";
+        alert("Great u won");
+        showRestartButton();
+    }
+},90000);
 function showRestartButton() {
     var restartButton = document.createElement("button");
     restartButton.innerText = "Play again";
