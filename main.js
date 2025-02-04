@@ -24,7 +24,7 @@ var checkWin = setInterval(function(){
         alert("Great u won");
         showRestartButton();
     }
-},90000);
+},60000);
 function showRestartButton() {
     var restartButton = document.createElement("button");
     restartButton.innerText = "Play again";
