@@ -47,6 +47,6 @@ function restartGame() {
     block.style.animation = "block 1s infinite linear"; 
     block.style.display = "block"; 
     block.style.left = "480px";
-
+    t=0;
     character.style.bottom = "0px";
 }
