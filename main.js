@@ -1,5 +1,6 @@
 var character = document.getElementById("character");
 var block = document.getElementById("block");
+let t=0;
 function jump(){
     if(character.classList != "animate"){
     character.classList.add("animate");
@@ -11,21 +12,20 @@ function jump(){
 var checkDead = setInterval(function(){
     var characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
     var blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
+    t++;
     if(blockLeft<20 && blockLeft>0 && characterTop>=130){
         block.style.animation = "none";
         block.style.display = "none";
         alert("Nah Fashil");
         showRestartButton();
-    }
-},10);
-var Win = setInterval(function(){
-    if(blockLeft>=20 && blockLeft<=0 && characterTop<130){ 
+    }else{if(t==6000){
         block.style.animation = "none";
         block.style.display = "none";
         alert("Great u won");
-        showRestartButton();
-    }
-},60000);
+        showRestartButton();}
+         }
+},10);
+
 function showRestartButton() {
     var restartButton = document.createElement("button");
     restartButton.innerText = "Play again";
