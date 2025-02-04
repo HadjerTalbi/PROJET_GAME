@@ -19,6 +19,7 @@ var checkDead = setInterval(function(){
     }
 },10);
 var Win = setInterval(function(){
+    if(blockLeft>=20 && blockLeft<=0 && characterTop<130){ 
         block.style.animation = "none";
         block.style.display = "none";
         alert("Great u won");
