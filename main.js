@@ -18,7 +18,7 @@ var checkDead = setInterval(function(){
         showRestartButton();
     }
 },10);
-var checkWin = setInterval(function(){
+var Win = setInterval(function(){
         block.style.animation = "none";
         block.style.display = "none";
         alert("Great u won");
