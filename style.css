@@ -8,16 +8,34 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background: linear-gradient(-45deg,rgb(55, 55, 173),rgb(139, 75, 202),rgb(220, 174, 101),rgb(248, 203, 140));
+    background-size: 400% 400%;
+    animation:hadjer 15s ease infinite;
+}
+@keyframes hadjer{
+    0%{
+     background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+
 }
 #game{
     width: 500px;
     height: 200px;
-    border: 1px solid black;
+    border: 2px solid rgb(34, 33, 33);
+    border-radius: 10px;
+    background-color: beige;
 }
 #character{
     width: 20px;
     height: 50px;
     background-color: rgb(178, 135, 213);
+    border-radius: 3px;
     position: relative;
     top: 150px;
 }
@@ -33,7 +51,8 @@ body{
 #block{
     width: 20px;
     height: 20px;
-    background-color: rgb(96, 166, 52);
+    background-color: rgb(114, 116, 112);
+    border-radius: 3px;
     position: relative;
     top:130px;
     left:480px;
@@ -43,3 +62,4 @@ body{
     0%{left:480px;}
     100%{left:-40px;}
 }
+
