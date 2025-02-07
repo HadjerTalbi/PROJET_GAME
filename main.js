@@ -33,14 +33,35 @@ function showRestartButton() {
     restartButton.style.top = "50%";
     restartButton.style.left = "50%";
     restartButton.style.transform = "translate(-50%, -50%)";
+    restartButton.style.padding = "15px 30px";
+    restartButton.style.fontSize = "18px"; 
+    restartButton.style.fontWeight = "bold"; 
+    restartButton.style.backgroundColor = "#4CAF50"; 
+    restartButton.style.color = "white"; 
+    restartButton.style.border = "none"; 
+    restartButton.style.borderRadius = "10px"; 
+    restartButton.style.cursor = "pointer"; 
+    restartButton.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.2)"; 
+    restartButton.style.transition = "all 0.3s ease"; 
+
+    restartButton.onmouseover = function() {
+        restartButton.style.backgroundColor = "#45a049"; 
+        restartButton.style.transform = "translate(-50%, -50%) scale(1.1)"; 
+    };
+
+    restartButton.onmouseout = function() {
+        restartButton.style.backgroundColor = "#4CAF50"; 
+        restartButton.style.transform = "translate(-50%, -50%) scale(1)";
+    };
+
     document.body.appendChild(restartButton);
 
-   
     restartButton.onclick = function() {
         restartGame();
         document.body.removeChild(restartButton); 
     };
 }
+
 
 function restartGame() {
     gameOver = false;
